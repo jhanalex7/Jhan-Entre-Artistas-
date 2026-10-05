@@ -1,0 +1,1807 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Jhan Entre Artistas: plataforma para apoyar, promocionar y dar visibilidad al talento artístico de Las Tunas. Mundial de Artistas, podcast y promoción musical.">
+<meta name="keywords" content="Jhan Entre Artistas, artistas de Las Tunas, música Las Tunas, Mundial de Artistas, promoción musical Las Tunas, Las Tunas TV">
+<meta name="author" content="Jhan Entre Artistas">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Jhan Entre Artistas | Las Tunas en el mapa">
+<meta property="og:description" content="Ya no cantamos. Ahora apoyamos. Una plataforma para el talento artístico de Las Tunas.">
+<meta property="og:type" content="website">
+
+<title>Jhan Entre Artistas — Las Tunas en el mapa</title>
+
+<style>
+:root{
+--bg:#080a09;
+--card:#111512;
+--text:#f4f6f3;
+--muted:#a9b0aa;
+--green:#39e66f;
+--gold:#d7b45a;
+--line:#202620
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Inter,Arial,sans-serif
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+.wrap{
+max-width:1180px;
+margin:auto;
+padding:0 24px
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:5;
+background:#080a09e8;
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line)
+}
+
+.nav{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.brand{
+font-weight:900;
+letter-spacing:.08em
+}
+
+.brand b{
+color:var(--green)
+}
+
+.links{
+display:flex;
+gap:22px;
+color:#cbd0cb;
+font-size:14px
+}
+
+.links a:hover{
+color:var(--green)
+}
+
+.hero{
+min-height:650px;
+display:grid;
+place-items:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 70% 35%,#14542555,transparent 34%),
+radial-gradient(circle at 20% 70%,#5c481f22,transparent 30%)
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+120deg,
+transparent 20%,
+#39e66f0c 50%,
+transparent 80%
+);
+transform:skewX(-15deg)
+}
+
+.kicker{
+color:var(--green);
+font-size:13px;
+font-weight:800;
+letter-spacing:.2em;
+text-transform:uppercase
+}
+
+.hero h1{
+font-size:clamp(54px,10vw,118px);
+line-height:.82;
+margin:18px 0;
+letter-spacing:-.065em;
+text-transform:uppercase;
+max-width:900px
+}
+
+.hero h1 span{
+color:var(--green);
+text-shadow:0 0 35px #39e66f33
+}
+
+.hero p{
+font-size:20px;
+color:var(--muted);
+max-width:640px;
+line-height:1.5
+}
+
+.btns{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px
+}
+
+.btn{
+padding:14px 20px;
+border-radius:9px;
+border:1px solid #354038;
+font-weight:800;
+display:inline-block
+}
+
+.primary{
+background:var(--green);
+color:#061008;
+border-color:var(--green)
+}
+
+.gold{
+border-color:#6c5b32;
+color:#e4ca7c
+}
+
+section{
+padding:90px 0;
+border-top:1px solid var(--line)
+}
+
+.eyebrow{
+color:var(--green);
+font-weight:800;
+letter-spacing:.14em;
+text-transform:uppercase;
+font-size:12px
+}
+
+h2{
+font-size:clamp(34px,5vw,58px);
+margin:10px 0 14px;
+letter-spacing:-.04em
+}
+
+.lead{
+color:var(--muted);
+font-size:18px;
+line-height:1.6;
+max-width:720px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px
+}
+
+.card{
+background:linear-gradient(145deg,#131814,#0d100e);
+border:1px solid var(--line);
+padding:28px;
+border-radius:18px;
+min-height:210px
+}
+
+.card .num{
+font-size:12px;
+color:var(--gold);
+font-weight:900
+}
+
+.card h3{
+font-size:25px;
+margin:40px 0 10px
+}
+
+.card p{
+color:var(--muted);
+line-height:1.5
+}
+
+.feature{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:20px
+}
+
+.panel{
+padding:42px;
+border:1px solid var(--line);
+border-radius:22px;
+background:linear-gradient(135deg,#151b16,#0b0d0c)
+}
+
+.quote{
+font-size:clamp(30px,4vw,52px);
+font-weight:900;
+line-height:1.02
+}
+
+.quote span{
+color:var(--green)
+}
+
+.stat{
+display:flex;
+justify-content:space-between;
+padding:17px 0;
+border-bottom:1px solid var(--line);
+color:var(--muted)
+}
+
+.stat b{
+color:var(--text)
+}
+
+.cta{
+text-align:center;
+background:radial-gradient(
+circle at 50% 0,
+#39e66f18,
+transparent 45%
+)
+}
+
+.cta .lead{
+margin:0 auto
+}
+
+footer{
+padding:35px 0;
+color:#778078;
+font-size:13px
+}
+
+.social{
+display:flex;
+gap:12px;
+margin-top:20px;
+flex-wrap:wrap
+}
+
+.social a{
+border:1px solid var(--line);
+padding:9px 12px;
+border-radius:7px
+}
+
+#registro label{
+display:block;
+color:#dce1dd;
+font-size:14px;
+font-weight:700;
+margin-bottom:18px
+}
+
+#registro input,
+#registro textarea{
+display:block;
+width:100%;
+margin-top:8px;
+padding:13px 14px;
+background:#090c0a;
+border:1px solid #303830;
+border-radius:9px;
+color:#fff;
+font:inherit;
+outline:none
+}
+
+#registro input:focus,
+#registro textarea:focus{
+border-color:#39e66f
+}
+
+#registro .formgrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:0 18px
+}
+
+#registro .check{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:400;
+margin-top:4px
+}
+
+#registro .check input{
+width:auto;
+margin:0
+}
+
+@media(max-width:800px){
+
+.links{
+display:none
+}
+
+.grid,
+.feature{
+grid-template-columns:1fr
+}
+
+.hero{
+min-height:570px
+}
+
+.hero h1{
+font-size:58px
+}
+
+.wrap{
+padding:0 18px
+}
+
+section{
+padding:65px 0
+}
+
+.panel{
+padding:28px
+}
+
+}
+
+@media(max-width:700px){
+
+#registro .formgrid{
+grid-template-columns:1fr
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="wrap nav">
+
+<div class="brand">
+JHAN <b>ENTRE ARTISTAS</b>
+</div>
+
+<div class="links">
+<a href="#inicio">Inicio</a>
+<a href="#proyecto">Proyecto</a>
+<a href="#mundial">Mundial</a>
+<a href="#podcast">Podcast</a>
+<a href="#promocion">Promoción</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</div>
+</nav>
+
+
+<header id="inicio" class="hero">
+
+<div class="wrap">
+
+<div class="kicker">
+Las Tunas en el mapa
+</div>
+
+<h1>
+Ya no cantamos.<br>
+<span>Ahora apoyamos.</span>
+</h1>
+
+<p>
+Una plataforma creada para darle visibilidad, unión y oportunidades al talento artístico de Las Tunas.
+</p>
+
+<div class="btns">
+
+<a class="btn primary" href="#proyecto">
+Conoce el proyecto
+</a>
+
+<a class="btn gold" href="#registro">
+Quiero participar
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section id="proyecto">
+
+<div class="wrap">
+
+<div class="eyebrow">
+El movimiento
+</div>
+
+<h2>
+Talento local. Voz propia. Una sola comunidad.
+</h2>
+
+<p class="lead">
+Jhan Entre Artistas nace para conectar artistas, creadores y público, apoyar el talento urbano y demostrar que en Las Tunas hay artistas de sobra.
+</p>
+
+<div class="grid">
+
+<article class="card">
+
+<span class="num">
+01 / VISIBILIDAD
+</span>
+
+<h3>
+Artistas
+</h3>
+
+<p>
+Presentamos y promocionamos artistas tuneros para que más personas conozcan su trabajo.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+02 / COMPETENCIA
+</span>
+
+<h3>
+Mundial de Artistas
+</h3>
+
+<p>
+Una competencia semanal donde el talento, la canción y la puesta en escena tienen la última palabra.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+03 / CONTENIDO
+</span>
+
+<h3>
+Las Tunas TV
+</h3>
+
+<p>
+Reels, entrevistas, podcast y contenido de calle para mantener al público cerca de sus artistas.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="mundial">
+
+<div class="wrap feature">
+
+<div class="panel">
+
+<div class="eyebrow">
+Mundial de Artistas · Las Tunas
+</div>
+
+<div class="quote">
+50% público.<br>
+<span>50% jurado.</span>
+</div>
+
+<p class="lead">
+Los artistas compiten con una canción de su autoría. El público vota durante 24 horas y un jurado evalúa letra, canción, video y desempeño.
+</p>
+
+<a class="btn primary" href="#registro">
+Quiero competir
+</a>
+
+</div>
+
+
+<div class="panel">
+
+<div class="stat">
+<span>Formato</span>
+<b>Semanal</b>
+</div>
+
+<div class="stat">
+<span>Votación pública</span>
+<b>24 horas</b>
+</div>
+
+<div class="stat">
+<span>Evaluación</span>
+<b>Jurado + público</b>
+</div>
+
+<div class="stat">
+<span>Gran premio</span>
+<b>100 USD</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="podcast">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Las Tunas Entre Artistas TV
+</div>
+
+<h2>
+Un Podcast de la calle.
+</h2>
+
+<p class="lead">
+Entrevistas, historias, humor y música directamente desde las calles de Las Tunas. Un espacio para conocer al artista detrás de la canción.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="promocion">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Promoción musical
+</div>
+
+<h2>
+Tu música merece verse.
+</h2>
+
+<p class="lead">
+Reels con idea original, grabación en locación y edición para artistas urbanos.
+</p>
+
+<div class="grid">
+
+<article class="card">
+
+<span class="num">
+01
+</span>
+
+<h3>
+1 Reel · 500 CUP
+</h3>
+
+<p>
+Grabación + idea + edición.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+02
+</span>
+
+<h3>
+Reel + fotos · 800 CUP
+</h3>
+
+<p>
+1 reel + 3 fotos.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+03
+</span>
+
+<h3>
+Pack · 1 800 CUP
+</h3>
+
+<p>
+3 reels + 4 fotos.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="registro">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Registro de artistas
+</div>
+
+<h2>
+Tu talento puede estar aquí.
+</h2>
+
+<p class="lead">
+Déjanos tus datos y cuéntanos sobre tu proyecto.
+</p>
+
+<div class="panel">
+
+<form
+id="artistForm"
+action="https://formsubmit.co/jhanalex7@gmail.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="Nuevo artista — Jhan Entre Artistas"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<div class="formgrid">
+
+<label>
+Nombre artístico
+
+<input
+required
+name="nombre_artistico"
+placeholder="Ej. El Cris Lírico"
+>
+
+</label>
+
+
+<label>
+Nombre completo
+
+<input
+required
+name="nombre_completo"
+placeholder="Tu nombre"
+>
+
+</label>
+
+
+<label>
+Teléfono / WhatsApp
+
+<input
+required
+name="telefono"
+placeholder="+53 ..."
+>
+
+</label>
+
+
+<label>
+Instagram
+
+<input
+name="instagram"
+placeholder="@tuusuario"
+>
+
+</label>
+
+
+<label>
+Facebook
+
+<input
+name="facebook"
+placeholder="Tu página o perfil"
+>
+
+</label>
+
+
+<label>
+Género musical
+
+<input
+required
+name="genero"
+placeholder="Reggaetón, trap, reparto..."
+>
+
+</label>
+
+</div>
+
+
+<label>
+Cuéntanos sobre tu proyecto
+
+<textarea
+required
+name="mensaje"
+rows="5"
+placeholder="¿Qué haces y qué te gustaría promocionar?"
+></textarea>
+
+</label>
+
+
+<label class="check">
+
+<input
+required
+type="checkbox"
+name="autorizacion"
+>
+
+Autorizo a Jhan Entre Artistas a contactarme con relación a mi registro.
+
+</label>
+
+
+<button
+class="btn primary"
+type="submit"
+>
+Enviar registro
+</button>
+
+
+<p style="color:#a9b0aa;font-size:13px;margin-top:14px">
+Los registros se enviarán a jhanalex7@gmail.com.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="cta">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Sé parte
+</div>
+
+<h2>
+¿Eres artista de Las Tunas?
+</h2>
+
+<p class="lead">
+Queremos conocerte, apoyar tu proyecto y ayudarte a poner tu talento alante.
+</p>
+
+<div class="btns" style="justify-content:center">
+
+<a
+class="btn primary"
+href="mailto:jhanalex7@gmail.com"
+>
+Contactar
+</a>
+
+<a class="btn gold" href="#">
+Instagram
+</a>
+
+<a class="btn gold" href="#">
+Facebook
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="wrap">
+
+<div class="brand">
+JHAN <b>ENTRE ARTISTAS</b>
+</div>
+
+<div class="social">
+
+<a href="#inicio">
+Instagram
+</a>
+
+<a href="#inicio">
+Facebook
+</a>
+
+<a href="#inicio">
+YouTube
+</a>
+
+<a href="#inicio">
+TikTok
+</a>
+
+<a href="#inicio">
+WhatsApp
+</a>
+
+</div>
+
+<p>
+© 2026 Jhan Entre Artistas · Las Tunas en el mapa.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html><!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Jhan Entre Artistas: plataforma para apoyar, promocionar y dar visibilidad al talento artístico de Las Tunas. Mundial de Artistas, podcast y promoción musical.">
+<meta name="keywords" content="Jhan Entre Artistas, artistas de Las Tunas, música Las Tunas, Mundial de Artistas, promoción musical Las Tunas, Las Tunas TV">
+<meta name="author" content="Jhan Entre Artistas">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Jhan Entre Artistas | Las Tunas en el mapa">
+<meta property="og:description" content="Ya no cantamos. Ahora apoyamos. Una plataforma para el talento artístico de Las Tunas.">
+<meta property="og:type" content="website">
+
+<title>Jhan Entre Artistas — Las Tunas en el mapa</title>
+
+<style>
+:root{
+--bg:#080a09;
+--card:#111512;
+--text:#f4f6f3;
+--muted:#a9b0aa;
+--green:#39e66f;
+--gold:#d7b45a;
+--line:#202620
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Inter,Arial,sans-serif
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+.wrap{
+max-width:1180px;
+margin:auto;
+padding:0 24px
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:5;
+background:#080a09e8;
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line)
+}
+
+.nav{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.brand{
+font-weight:900;
+letter-spacing:.08em
+}
+
+.brand b{
+color:var(--green)
+}
+
+.links{
+display:flex;
+gap:22px;
+color:#cbd0cb;
+font-size:14px
+}
+
+.links a:hover{
+color:var(--green)
+}
+
+.hero{
+min-height:650px;
+display:grid;
+place-items:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 70% 35%,#14542555,transparent 34%),
+radial-gradient(circle at 20% 70%,#5c481f22,transparent 30%)
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+120deg,
+transparent 20%,
+#39e66f0c 50%,
+transparent 80%
+);
+transform:skewX(-15deg)
+}
+
+.kicker{
+color:var(--green);
+font-size:13px;
+font-weight:800;
+letter-spacing:.2em;
+text-transform:uppercase
+}
+
+.hero h1{
+font-size:clamp(54px,10vw,118px);
+line-height:.82;
+margin:18px 0;
+letter-spacing:-.065em;
+text-transform:uppercase;
+max-width:900px
+}
+
+.hero h1 span{
+color:var(--green);
+text-shadow:0 0 35px #39e66f33
+}
+
+.hero p{
+font-size:20px;
+color:var(--muted);
+max-width:640px;
+line-height:1.5
+}
+
+.btns{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px
+}
+
+.btn{
+padding:14px 20px;
+border-radius:9px;
+border:1px solid #354038;
+font-weight:800;
+display:inline-block
+}
+
+.primary{
+background:var(--green);
+color:#061008;
+border-color:var(--green)
+}
+
+.gold{
+border-color:#6c5b32;
+color:#e4ca7c
+}
+
+section{
+padding:90px 0;
+border-top:1px solid var(--line)
+}
+
+.eyebrow{
+color:var(--green);
+font-weight:800;
+letter-spacing:.14em;
+text-transform:uppercase;
+font-size:12px
+}
+
+h2{
+font-size:clamp(34px,5vw,58px);
+margin:10px 0 14px;
+letter-spacing:-.04em
+}
+
+.lead{
+color:var(--muted);
+font-size:18px;
+line-height:1.6;
+max-width:720px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px
+}
+
+.card{
+background:linear-gradient(145deg,#131814,#0d100e);
+border:1px solid var(--line);
+padding:28px;
+border-radius:18px;
+min-height:210px
+}
+
+.card .num{
+font-size:12px;
+color:var(--gold);
+font-weight:900
+}
+
+.card h3{
+font-size:25px;
+margin:40px 0 10px
+}
+
+.card p{
+color:var(--muted);
+line-height:1.5
+}
+
+.feature{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:20px
+}
+
+.panel{
+padding:42px;
+border:1px solid var(--line);
+border-radius:22px;
+background:linear-gradient(135deg,#151b16,#0b0d0c)
+}
+
+.quote{
+font-size:clamp(30px,4vw,52px);
+font-weight:900;
+line-height:1.02
+}
+
+.quote span{
+color:var(--green)
+}
+
+.stat{
+display:flex;
+justify-content:space-between;
+padding:17px 0;
+border-bottom:1px solid var(--line);
+color:var(--muted)
+}
+
+.stat b{
+color:var(--text)
+}
+
+.cta{
+text-align:center;
+background:radial-gradient(
+circle at 50% 0,
+#39e66f18,
+transparent 45%
+)
+}
+
+.cta .lead{
+margin:0 auto
+}
+
+footer{
+padding:35px 0;
+color:#778078;
+font-size:13px
+}
+
+.social{
+display:flex;
+gap:12px;
+margin-top:20px;
+flex-wrap:wrap
+}
+
+.social a{
+border:1px solid var(--line);
+padding:9px 12px;
+border-radius:7px
+}
+
+#registro label{
+display:block;
+color:#dce1dd;
+font-size:14px;
+font-weight:700;
+margin-bottom:18px
+}
+
+#registro input,
+#registro textarea{
+display:block;
+width:100%;
+margin-top:8px;
+padding:13px 14px;
+background:#090c0a;
+border:1px solid #303830;
+border-radius:9px;
+color:#fff;
+font:inherit;
+outline:none
+}
+
+#registro input:focus,
+#registro textarea:focus{
+border-color:#39e66f
+}
+
+#registro .formgrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:0 18px
+}
+
+#registro .check{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:400;
+margin-top:4px
+}
+
+#registro .check input{
+width:auto;
+margin:0
+}
+
+@media(max-width:800px){
+
+.links{
+display:none
+}
+
+.grid,
+.feature{
+grid-template-columns:1fr
+}
+
+.hero{
+min-height:570px
+}
+
+.hero h1{
+font-size:58px
+}
+
+.wrap{
+padding:0 18px
+}
+
+section{
+padding:65px 0
+}
+
+.panel{
+padding:28px
+}
+
+}
+
+@media(max-width:700px){
+
+#registro .formgrid{
+grid-template-columns:1fr
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="wrap nav">
+
+<div class="brand">
+JHAN <b>ENTRE ARTISTAS</b>
+</div>
+
+<div class="links">
+<a href="#inicio">Inicio</a>
+<a href="#proyecto">Proyecto</a>
+<a href="#mundial">Mundial</a>
+<a href="#podcast">Podcast</a>
+<a href="#promocion">Promoción</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</div>
+</nav>
+
+
+<header id="inicio" class="hero">
+
+<div class="wrap">
+
+<div class="kicker">
+Las Tunas en el mapa
+</div>
+
+<h1>
+Ya no cantamos.<br>
+<span>Ahora apoyamos.</span>
+</h1>
+
+<p>
+Una plataforma creada para darle visibilidad, unión y oportunidades al talento artístico de Las Tunas.
+</p>
+
+<div class="btns">
+
+<a class="btn primary" href="#proyecto">
+Conoce el proyecto
+</a>
+
+<a class="btn gold" href="#registro">
+Quiero participar
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section id="proyecto">
+
+<div class="wrap">
+
+<div class="eyebrow">
+El movimiento
+</div>
+
+<h2>
+Talento local. Voz propia. Una sola comunidad.
+</h2>
+
+<p class="lead">
+Jhan Entre Artistas nace para conectar artistas, creadores y público, apoyar el talento urbano y demostrar que en Las Tunas hay artistas de sobra.
+</p>
+
+<div class="grid">
+
+<article class="card">
+
+<span class="num">
+01 / VISIBILIDAD
+</span>
+
+<h3>
+Artistas
+</h3>
+
+<p>
+Presentamos y promocionamos artistas tuneros para que más personas conozcan su trabajo.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+02 / COMPETENCIA
+</span>
+
+<h3>
+Mundial de Artistas
+</h3>
+
+<p>
+Una competencia semanal donde el talento, la canción y la puesta en escena tienen la última palabra.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+03 / CONTENIDO
+</span>
+
+<h3>
+Las Tunas TV
+</h3>
+
+<p>
+Reels, entrevistas, podcast y contenido de calle para mantener al público cerca de sus artistas.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="mundial">
+
+<div class="wrap feature">
+
+<div class="panel">
+
+<div class="eyebrow">
+Mundial de Artistas · Las Tunas
+</div>
+
+<div class="quote">
+50% público.<br>
+<span>50% jurado.</span>
+</div>
+
+<p class="lead">
+Los artistas compiten con una canción de su autoría. El público vota durante 24 horas y un jurado evalúa letra, canción, video y desempeño.
+</p>
+
+<a class="btn primary" href="#registro">
+Quiero competir
+</a>
+
+</div>
+
+
+<div class="panel">
+
+<div class="stat">
+<span>Formato</span>
+<b>Semanal</b>
+</div>
+
+<div class="stat">
+<span>Votación pública</span>
+<b>24 horas</b>
+</div>
+
+<div class="stat">
+<span>Evaluación</span>
+<b>Jurado + público</b>
+</div>
+
+<div class="stat">
+<span>Gran premio</span>
+<b>100 USD</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="podcast">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Las Tunas Entre Artistas TV
+</div>
+
+<h2>
+Un Podcast de la calle.
+</h2>
+
+<p class="lead">
+Entrevistas, historias, humor y música directamente desde las calles de Las Tunas. Un espacio para conocer al artista detrás de la canción.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="promocion">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Promoción musical
+</div>
+
+<h2>
+Tu música merece verse.
+</h2>
+
+<p class="lead">
+Reels con idea original, grabación en locación y edición para artistas urbanos.
+</p>
+
+<div class="grid">
+
+<article class="card">
+
+<span class="num">
+01
+</span>
+
+<h3>
+1 Reel · 500 CUP
+</h3>
+
+<p>
+Grabación + idea + edición.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+02
+</span>
+
+<h3>
+Reel + fotos · 800 CUP
+</h3>
+
+<p>
+1 reel + 3 fotos.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<span class="num">
+03
+</span>
+
+<h3>
+Pack · 1 800 CUP
+</h3>
+
+<p>
+3 reels + 4 fotos.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="registro">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Registro de artistas
+</div>
+
+<h2>
+Tu talento puede estar aquí.
+</h2>
+
+<p class="lead">
+Déjanos tus datos y cuéntanos sobre tu proyecto.
+</p>
+
+<div class="panel">
+
+<form
+id="artistForm"
+action="https://formsubmit.co/jhanalex7@gmail.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="Nuevo artista — Jhan Entre Artistas"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<div class="formgrid">
+
+<label>
+Nombre artístico
+
+<input
+required
+name="nombre_artistico"
+placeholder="Ej. El Cris Lírico"
+>
+
+</label>
+
+
+<label>
+Nombre completo
+
+<input
+required
+name="nombre_completo"
+placeholder="Tu nombre"
+>
+
+</label>
+
+
+<label>
+Teléfono / WhatsApp
+
+<input
+required
+name="telefono"
+placeholder="+53 ..."
+>
+
+</label>
+
+
+<label>
+Instagram
+
+<input
+name="instagram"
+placeholder="@tuusuario"
+>
+
+</label>
+
+
+<label>
+Facebook
+
+<input
+name="facebook"
+placeholder="Tu página o perfil"
+>
+
+</label>
+
+
+<label>
+Género musical
+
+<input
+required
+name="genero"
+placeholder="Reggaetón, trap, reparto..."
+>
+
+</label>
+
+</div>
+
+
+<label>
+Cuéntanos sobre tu proyecto
+
+<textarea
+required
+name="mensaje"
+rows="5"
+placeholder="¿Qué haces y qué te gustaría promocionar?"
+></textarea>
+
+</label>
+
+
+<label class="check">
+
+<input
+required
+type="checkbox"
+name="autorizacion"
+>
+
+Autorizo a Jhan Entre Artistas a contactarme con relación a mi registro.
+
+</label>
+
+
+<button
+class="btn primary"
+type="submit"
+>
+Enviar registro
+</button>
+
+
+<p style="color:#a9b0aa;font-size:13px;margin-top:14px">
+Los registros se enviarán a jhanalex7@gmail.com.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="cta">
+
+<div class="wrap">
+
+<div class="eyebrow">
+Sé parte
+</div>
+
+<h2>
+¿Eres artista de Las Tunas?
+</h2>
+
+<p class="lead">
+Queremos conocerte, apoyar tu proyecto y ayudarte a poner tu talento alante.
+</p>
+
+<div class="btns" style="justify-content:center">
+
+<a
+class="btn primary"
+href="mailto:jhanalex7@gmail.com"
+>
+Contactar
+</a>
+
+<a class="btn gold" href="#">
+Instagram
+</a>
+
+<a class="btn gold" href="#">
+Facebook
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="wrap">
+
+<div class="brand">
+JHAN <b>ENTRE ARTISTAS</b>
+</div>
+
+<div class="social">
+
+<a href="#inicio">
+Instagram
+</a>
+
+<a href="#inicio">
+Facebook
+</a>
+
+<a href="#inicio">
+YouTube
+</a>
+
+<a href="#inicio">
+TikTok
+</a>
+
+<a href="#inicio">
+WhatsApp
+</a>
+
+</div>
+
+<p>
+© 2026 Jhan Entre Artistas · Las Tunas en el mapa.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
